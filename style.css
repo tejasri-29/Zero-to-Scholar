@@ -1,0 +1,105 @@
+:root {
+  --bg: #f4f6f8;
+  --text: #333;
+  --primary: #0077ff;
+  --card: #eef4ff;
+  --completed: #d4ffd4;
+}
+
+body.dark {
+  --bg: #1c1c1c;
+  --text: #f4f4f4;
+  --primary: #00bfff;
+  --card: #2c2f3a;
+  --completed: #2e8b5733;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#planContainer {
+  margin-top: 1rem;
+}
+
+.day-item {
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 4px solid var(--primary);
+  background: var(--card);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-item.completed {
+  background: var(--completed);
+  text-decoration: line-through;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
